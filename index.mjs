@@ -6,6 +6,6 @@ const f = () => {
     return { buffer: canvas.toBuffer("raw") };
 };
 for (let i = 0; i < 200; i++) {
-    if (process.argv[2] == "gc") Bun.gc(true);
+    if (process.argv[2] === "gc") Bun.gc(true);
     new Promise((r) => f());
 }
